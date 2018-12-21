@@ -10,17 +10,18 @@ public class SnakeSegment {
 		this.location = loc;
 		this.size = size;
 	}
-	
+
 	public void setLocation(Location loc) {
 		this.location = loc;
 	}
-	
+
 	public Location getLocation() {
 		return location;
 	}
-	
+
 	public void draw(Graphics g) {
 		g.setColor(Snake.SNAKE_COLOR);
-		g.drawRect(location.x * size, location.y * size, size, size);;
+		g.fillRect(location.x * size, location.y * size, size, size);
+		;
 	}
 }

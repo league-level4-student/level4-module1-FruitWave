@@ -58,7 +58,7 @@ public class Snake {
 
 		// 2. Iterate through the SnakeSegments in reverse order
 		Location prev = head.getLocation();
-		for (int i = snake.size(); i >= 0; i--) {
+		for (int i = snake.size() - 1; i >= 0; i--) {
 			Location templock = snake.get(i).getLocation();
 			snake.get(i).setLocation(prev);
 			prev = templock;
@@ -95,7 +95,7 @@ public class Snake {
 		// 1. clear the snake
 		snake.clear();
 		// 2. set the location of the head
-		head.setLocation(new Location(4, 4));
+		head.setLocation(loc);
 		// 3. add the head to the snake
 		snake.add(head);
 	}
